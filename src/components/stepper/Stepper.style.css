@@ -1,0 +1,49 @@
+.stepper {
+  width: 90%;
+  height: fit-content;
+  min-height: calc(100vh - 60px);
+  margin: 30px 10px;
+  padding: 20px 20px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.steppr__step__container {
+  border-top: 1px solid lightgray;
+  margin-top: 20px;
+}
+
+.form {
+  margin: 20px 30px;
+  min-height: 68vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.input--checkbox--text {
+  outline: none;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid;
+  width: 300px;
+}
+
+.title {
+  font-size: xx-large;
+  font-weight: 500;
+  width: 500px;
+}
+
+.description {
+  font-size: large;
+  width: 500px;
+}
+
+h2 {
+  margin-top: 25px;
+  margin-bottom: 5px;
+}

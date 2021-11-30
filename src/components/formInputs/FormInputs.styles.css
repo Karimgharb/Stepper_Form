@@ -1,0 +1,32 @@
+.section__title {
+  margin-top: 25px;
+  margin-bottom: 5px;
+  opacity: 0.9;
+}
+
+h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.input__container {
+  display: flex;
+}
+.form__input--checkbox {
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  padding-bottom: 2px;
+}
+
+.form__input--checkbox:hover {
+  border-bottom: 2px solid black;
+}
+
+.form__input--checkbox {
+  margin: 10px;
+}
+
+.input--checkbox--label {
+  margin: 0px 5px;
+  font-size: large;
+  font-weight: 500;
+}
