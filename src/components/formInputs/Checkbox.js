@@ -5,7 +5,8 @@ import "./FormInputs.styles.css";
 export default function CheckboxForm({ data, title }) {
   const [checkedItem, setCheckedItem] = useState("");
   const [showOther, setShowOther] = useState(false);
-  function checkSizeHandler(e) {
+
+  function checkHandler(e) {
     setCheckedItem(e.target.value);
     if (e.target.value === "Other") {
       setShowOther(!showOther);
@@ -17,19 +18,24 @@ export default function CheckboxForm({ data, title }) {
     setInput(e.target.value);
   };
 
+  console.log("checked_item: ", checkedItem);
   return (
     <>
       <h2 className="section__title">{title}</h2>
       <div className="input__container">
         {data.map((item) => (
-          <div className="form__input--checkbox">
+          <div
+            className="form__input--checkbox"
+            key={item}
+            onClick={checkHandler}
+          >
             {data === sizes ? (
               <input
                 type="checkbox"
                 value={item}
                 name={item}
-                onClick={checkSizeHandler}
-                checked={checkedItem === item ? true : false}
+                onChange={checkHandler}
+                checked={checkedItem === item ? true : false} //only one item could be checked
                 className="input--checkbox--box"
               />
             ) : (
@@ -37,7 +43,7 @@ export default function CheckboxForm({ data, title }) {
                 type="checkbox"
                 value={item}
                 name={item}
-                onClick={checkSizeHandler}
+                onChange={checkHandler}
                 className="input--checkbox--box"
               />
             )}

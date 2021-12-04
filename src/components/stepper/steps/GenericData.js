@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CheckboxForm from "../../formInputs/Checkbox.js";
 import TextInput from "../../formInputs/TextInput.js";
 import { sizes, perks } from "./utils/utils.js";
