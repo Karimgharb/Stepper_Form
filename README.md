@@ -1,6 +1,6 @@
 # Add location map
 
-Stepper form where user can crreat a **House for rent** post.
+Stepper form where user can create a **House for rent** post.
 
 _Playing around with map libraries_
 
