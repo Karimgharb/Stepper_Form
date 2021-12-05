@@ -1,6 +1,8 @@
 # Add location map
 
-> Playing around with map libraries
+Stepper form where user can crreat a **House for rent** post.
+
+_Playing around with map libraries_
 
 - User can add house data (size + perks)
 - user can add a house location on a map
@@ -12,15 +14,17 @@
 - Mapbox: https://www.mapbox.com/
 - Deck.gl: https://deck.gl/
 
-## TODO
+## TODOs
 
 - [x] Click a button to display add house form
-- [ ] Populate the form with data
-  - [x] Select size
-  - [x] Add perks from list
-  - [ ] Set the price
-- [ ] Locate on the map
-- [ ] Display data on a card
-  - [ ] OnClick => display the data
-    - [ ] Left section for text data
-    - [ ] Map on the right section with a pin on the appropriate location
+- [x] Select size
+- [x] Add perks from list
+- [x] Add post title
+- [x] Add post description
+- [x] Add the map
+  - [x] Mapbox
+  - [ ] Deckgl
+- [x] Locate on the map (Marker)
+- [ ] upload images
+- [ ] Set the price
+- [ ] Display data on a card (POST component)
