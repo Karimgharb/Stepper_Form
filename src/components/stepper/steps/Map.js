@@ -1,12 +1,20 @@
 import React, { useEffect, useState } from "react";
-import ReactMapGL, { Marker } from "react-map-gl";
+import ReactMapGL, { Marker, FullscreenControl } from "react-map-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
 import RoomIcon from "@mui/icons-material/Room";
+
+const fullscreenControlStyle = {
+  right: 10,
+  top: 10,
+  zIndex: 1200,
+};
+
 export default function Map() {
   const [markerCoord, setMarkerCoord] = useState(null);
 
   const [viewport, setViewport] = useState({
-    width: 1340,
-    height: 510,
+    width: 500,
+    height: 500,
     latitude: 35.0354,
     longitude: 9.4839,
     zoom: 4,
@@ -15,8 +23,6 @@ export default function Map() {
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((pos) => {
       setViewport({
-        width: 1340,
-        height: 510,
         zoom: 7,
         latitude: pos.coords.latitude,
         longitude: pos.coords.longitude,
@@ -34,6 +40,8 @@ export default function Map() {
         className="mapview__map"
         mapStyle="mapbox://styles/mapbox/streets-v11"
         {...viewport}
+        width="85vw"
+        height="66vh"
         mapboxApiAccessToken="pk.eyJ1Ijoiam9lb3J0ZWdhIiwiYSI6ImNrd3NxOW5iajAxaDAycW1pdXkwNWRtN2kifQ.m0tiBv3hipP-XFcVeG6Jdw"
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
         onClick={(e) =>
@@ -43,6 +51,7 @@ export default function Map() {
           })
         }
       >
+        <FullscreenControl style={fullscreenControlStyle} />
         {markerCoord && (
           <Marker
             latitude={markerCoord.lat}
