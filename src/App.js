@@ -12,7 +12,7 @@ function App() {
         <StepperForm />
       ) : (
         <div className="startPoint">
-          <h2>👋 bonjourno 👋</h2>
+          <h2>👋 Holà 👋</h2>
           <h1>🚧👷‍♂️ Testing new feature 👷‍♂️🚧</h1>
           <Button
             onClick={() => {
