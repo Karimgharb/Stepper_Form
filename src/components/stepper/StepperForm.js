@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import GenericData from "./steps/GenericData";
 import "./Stepper.style.css";
 import Map from "./steps/Map";
+import UploadImages from "./steps/UploadImages";
 
 const steps = [
   "Add house informations",
@@ -78,7 +79,7 @@ export default function StepperForm() {
 
           {activeStep === 0 ? <GenericData /> : null}
           {activeStep === 1 ? <Map /> : null}
-          {activeStep === 2 ? <p>third step</p> : null}
+          {activeStep === 2 ? <UploadImages /> : null}
           {activeStep === 3 ? <p>forth step</p> : null}
 
           {/* Form view ends here */}
