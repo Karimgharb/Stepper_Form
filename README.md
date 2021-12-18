@@ -25,6 +25,12 @@ _Playing around with map libraries_
   - [x] Mapbox
   - [ ] Deckgl
 - [x] Locate on the map (Marker)
-- [ ] upload images
+- [ ] Upload images
+  - [x] Convert to base64
+  - [x] Display images
+  - [ ] Compress images
+  - [ ] Fix style
 - [ ] Set the price
 - [ ] Display data on a card (POST component)
+- [ ] State management
+- [ ] Post DB
